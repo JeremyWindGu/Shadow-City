@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadow City – Light Pollution Project</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Shadow City</h1>
+    <p>A Cardgame About Light, Power, and the Night</p>
+    <p class="disclaimer">This website presents an early-stage concept and reflects one phase of the design process. The final outcome is still in development and subject to change.</p>
+  </header>
+
+  <main>
+    <div class="neon-overlay"></div>
+    <div class="city-grid"></div>
+    <div class="frosted-glass-bg"></div>
+    <div class="milky-way-bg"></div>
+    <section class="block">
+      <h2>Research Questions</h2>
+      <ol>
+        <li>
+          <strong>Who controls the distribution of light in cities, and how does light become a tool of governance, surveillance, or exclusion?</strong>
+          <p>Urban lighting is rarely neutral. Decisions about where, when, and how intensely to illuminate a space often reflect broader systems of power, control, and governance—light can be used to shape human behavior, extend economic activity, and assert authority.</p>
+          <ul>
+            <li>Light is used to shape behavior and perception:
+              <ul>
+                <li>Commercial districts stay brightly lit to extend consumption hours.</li>
+                <li>Street lighting design affects perceptions of safety and order.</li>
+                <li>Surveillance systems rely on constant illumination to enhance visibility.</li>
+              </ul>
+            </li>
+            <li>Sometimes, the absence of light is also a political act — darkness is imposed to exclude, disempower, or neglect certain communities.</li>
+          </ul>
+        </li>
+        
+        <li>
+          <strong>Can a game-based framework critically reflect on the politics of light, visibility, and darkness?</strong>
+          <p>Games offer a structured space to simulate and reflect on real-world systems. Through mechanics, players can experience how illumination becomes a contested resource, and how visibility—or invisibility—shapes advantage, vulnerability, or resistance.</p>
+          <ul>
+            <li>Actions such as "illuminate" or "dim" carry political consequences in the game world.</li>
+            <li>Darkness becomes not just a passive state, but an active zone of negotiation, resistance, or sanctuary.</li>
+          </ul>
+        </li>
+        
+        <li>
+          <strong>How might speculative gameplay help us rethink what a "right to darkness" might mean in the urban nightscape?</strong>
+          <p>In most urban contexts, darkness is framed as a deficiency—something to eliminate for safety, productivity, or visibility. But darkness can also be a shared right: a condition that supports rest, privacy, biodiversity, and even wonder. Stargazing, sleep quality, and nocturnal wildlife all depend on darkness, yet it is often compromised by overlighting and light pollution. A speculative game can open space to explore what it might mean to defend darkness as a public good, and how city policy might change if the “right to darkness” were treated as seriously as the right to light.</p>
+          <ul>
+            <li>Darkness is not merely the absence of light—it can be a form of freedom, ecology, intimacy, and rest:
+              <ul>
+                <li>For astronomers, it's a condition for seeing the stars;</li>
+                <li>For wildlife, it's essential for survival;</li>
+                <li>For residents, it provides privacy and peace;</li>
+                <li>For cultural and spiritual life, it brings imagination, silence, and ritual.</li>
+              </ul>
+            </li>
+            <li>Although this right doesn't currently exist in law, a speculative game allows players to experiment with its consequences and consider what policies might make it real.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section class="block">
+      <h2>Keywords</h2>
+      <div class="practice-image-container">
+        <img src="image_web/Light Pollution.jpg" alt="Light Pollution - Urban Nightscape" class="practice-image">
+      </div>
+      <dl>
+        <dt><strong>Light Pollution</strong></dt>
+        <dd>Excessive or misdirected artificial light that disrupts ecosystems, human health, and the visibility of the night sky. Often a byproduct of over-illumination in urban environments.</dd>
+        
+        <dt><strong>Urban Governance</strong></dt>
+        <dd>The policies, regulations, and power structures that shape how cities are planned, lit, monitored, and managed. Light becomes a tool through which governance is enacted.</dd>
+        
+        <dt><strong>Sensory Politics</strong></dt>
+        <dd>The ways in which perception—especially sight, sound, and visibility—is controlled or shaped by social and technological systems. In this case, how light affects what can be seen or hidden in the city.</dd>
+        
+        <dt><strong>Critical Game Design</strong></dt>
+        <dd>A design approach that uses gameplay to reflect on, critique, or challenge real-world systems. Here, game mechanics simulate conflicts over lighting, access, and urban space.</dd>
+        
+        <dt><strong>Nighttime Ecology</strong></dt>
+        <dd>The study and protection of ecosystems that rely on natural darkness. Artificial light disrupts behaviors such as migration, reproduction, and feeding among nocturnal species.</dd>
+        
+        <dt><strong>Speculative Urbanism</strong></dt>
+        <dd>The use of fiction, simulation, or design to imagine alternative futures for cities. This includes rethinking public rights, technologies, and spatial practices—such as the "right to darkness."</dd>
+      </dl>
+    </section>
+
+    <section class="block">
+      <h2>Intersecting Fields</h2>
+      <ul>
+        <li>Computational Design</li>
+        <li>Urban Environmental Studies</li>
+        <li>Critical Game Design</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>Historical Lineage</h2>
+      <div class="lineage-grid">
+        <div class="lineage-item" data-year="1967">
+          <div class="lineage-node">
+            <div class="node-content">
+              <h4>Theories of Spectacle & Surveillance</h4>
+              <p class="period">1967–present</p>
+              <p class="key-figures">Guy Debord's Society of the Spectacle (1967); Foucault's Discipline and Punish (1975)</p>
+              <div class="relation">Frames artificial light as both a spectacle of power and a tool of surveillance</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lineage-item" data-year="1970">
+          <div class="lineage-node">
+            <div class="node-content">
+              <h4>Participatory Design</h4>
+              <p class="period">1970s–present</p>
+              <p class="key-figures">Scandinavian PD movement (1970s)</p>
+              <div class="relation">Emphasizes co-creation with stakeholders, informing collaborative prototyping of the game</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lineage-item" data-year="1982">
+          <div class="lineage-node">
+            <div class="node-content">
+              <h4>Environmental Justice Movement</h4>
+              <p class="period">1982–present</p>
+              <p class="key-figures">United Church of Christ Toxic Wastes & Race report (1982); Robert Bullard's Dumping in Dixie (1983)</p>
+              <div class="relation">Contextualizes uneven impacts of light pollution on vulnerable communities</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lineage-item" data-year="1988">
+          <div class="lineage-node">
+            <div class="node-content">
+              <h4>Dark Sky Movement</h4>
+              <p class="period">1988–present</p>
+              <p class="key-figures">International Dark-Sky Association founded 1988</p>
+              <div class="relation">Provides the foundational ethos of resisting light pollution and restoring night skies</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lineage-item" data-year="1993">
+          <div class="lineage-node">
+            <div class="node-content">
+              <h4>Citizen Science Movement</h4>
+              <p class="period">1993–present</p>
+              <p class="key-figures">Cornell Lab's eBird (2002); Galaxy Zoo (2007)</p>
+              <div class="relation">Introduces grassroots data-gathering practices that empower communities to document sky brightness</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lineage-item" data-year="1999">
+          <div class="lineage-node">
+            <div class="node-content">
+              <h4>Speculative Design</h4>
+              <p class="period">1999–present</p>
+              <p class="key-figures">Anthony Dunne & Fiona Raby's Design Noir (1999); Dunne & Raby's Speculative Everything (2013)</p>
+              <div class="relation">Offers methods for designing provocative scenarios that challenge current lighting paradigms</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lineage-item" data-year="2005">
+          <div class="lineage-node">
+            <div class="node-content">
+              <h4>Ludic Activism</h4>
+              <p class="period">2005–present</p>
+              <p class="key-figures">Molleindustria founded 2005; Persuasive Games milestones</p>
+              <div class="relation">Applies playful interventions for social change, inspiring activist game scenarios</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lineage-item" data-year="2007">
+          <div class="lineage-node">
+            <div class="node-content">
+              <h4>Critical Play</h4>
+              <p class="period">2007–present</p>
+              <p class="key-figures">Mary Flanagan's Critical Play (2009)</p>
+              <div class="relation">Uses game mechanics to critique socio-technical systems, guiding the card game's reflective elements</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lineage-item" data-year="2000">
+          <div class="lineage-node">
+            <div class="node-content">
+              <h4>Environmental Data Activism</h4>
+              <p class="period">2000s–present</p>
+              <p class="key-figures">Public Lab founded 2006; Glowmaps projects; LightTribe initiatives</p>
+              <div class="relation">Demonstrates use of open data and DIY sensors to visualize and contest light pollution</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lineage-item" data-year="2010">
+          <div class="lineage-node">
+            <div class="node-content">
+              <h4>Data Visualization & Narrative</h4>
+              <p class="period">2010s–present</p>
+              <p class="key-figures">Andy Kirk's Data Visualization: A Handbook (2012); Alberto Cairo's The Functional Art (2012)</p>
+              <div class="relation">Provides strategies for embedding real light-pollution data into intuitive game displays</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Community of Practice</h2>
+      
+      <div class="practice-group">
+        <h3><a href="https://darksky.org/" target="_blank">International Dark-Sky Association (IDA)</a></h3>
+        <div class="practice-image-container">
+          <img src="image_web/International Dark-Sky Association (IDA).png" alt="International Dark-Sky Association (IDA)" class="practice-image">
+        </div>
+        <blockquote>"Our mission is to protect the night from light pollution through environmentally responsible outdoor lighting."</blockquote>
+        <blockquote>"We envision a night sky preserved for present and future generations."</blockquote>
+        <blockquote>"Light pollution is a side effect of industrial civilization. Its sources include building exterior and interior lighting, advertising, commercial properties, factories, streetlights, and illuminated sporting venues."</blockquote>
+        <blockquote>"We advocate for responsible lighting policies that minimize skyglow and glare, while improving visibility and safety."</blockquote>
+        <div class="practice-image-container">
+          <img src="image_web/skyglow & glare.jpg" alt="Skyglow and Glare - Light Pollution Infographic" class="practice-image">
+        </div>
+        <blockquote>"Natural darkness has intrinsic ecological, cultural, and scientific value—and must be protected as a shared human heritage."</blockquote>
+        <p><a href="https://blue-marble.de/nightlights/" target="_blank"> NASA Blue Marble Navigator</a></p>
+      </div>
+
+      <div class="practice-group">
+        <h3><a href="https://www.goodreads.com/book/show/36696533-new-dark-age?ac=1&from_search=true&qid=bqmXPswiPo&rank=1" target="_blank">James Bridle – New Dark Age: Technology and the End of the Future</a></h3>
+        <div class="practice-image-container">
+          <img src="image_web/New Dark Age-Technology and the End of the Future.jpg" alt="New Dark Age: Technology and the End of the Future by James Bridle" class="practice-image">
+        </div>
+        <blockquote>"We know more and more about the world, while being less and less able to do anything about it."</blockquote>
+        <blockquote>"More computation does not make the world more understandable. It makes it more unknowable."</blockquote>
+        <blockquote>"Obscurity is not a side effect of modern technology—it is its very condition."</blockquote>
+        <blockquote>"The light of reason has been replaced by the glow of surveillance."</blockquote>
+        <blockquote>"Rather than clarity, what we require is literacy in ambiguity and uncertainty."</blockquote>
+      </div>
+
+      <div class="practice-group">
+        <h3><a href="https://lightcollective.net/light/ing/guerrilla-lighting" target="_blank">Guerilla Light Collective</a></h3>
+        <blockquote>"We design and execute unsanctioned lighting installations in public spaces."</blockquote>
+        <blockquote>"Light can be a medium of resistance. We reclaim spaces by illuminating what's been ignored."</blockquote>
+        <p><a href="https://www.youtube.com/watch?v=N-WYbjtCgTw&t=1s" target="_blank">Findhorn Bay Festival - Guerrilla Lighting Project</a></p>
+        <div class="practice-image-container">
+          <img src="image_web/findhorn-2016-GL-11-126_1200_674_75.jpg" alt="Guerrilla Lighting Project at Findhorn Bay Festival" class="practice-image">
+        </div>
+          <div class="festival-content">
+            <h4>Findhorn Bay Festival</h4>
+            <p><strong>21–26 September 2016</strong><br>
+            <strong>Findhorn, Moray</strong></p>
+            <p><a href="https://findhornbayfestival.com/" target="_blank">findhornbayfestival.com/</a></p>
+            <p>The biennial Findhorn Bay Festival is a spectacular six-day celebration taking place in the heart of Moray and includes a vibrant mix of theatre, music, dance and visual art as well as free events including the popular annual community event Culture Day Forres.</p>
+            <p><strong>Light Collective were involved in four events:</strong></p>
+            <ul>
+              <li>Guerrilla Projections at Benromach Distillery</li>
+              <li>Guerrilla Forres</li>
+              <li>Photography Workshop at Kinloss Abbey</li>
+              <li>Guerrilla Findhorn</li>
+            </ul>
+          </div>
+        <blockquote>"Our interventions reveal how lighting infrastructures silently shape behavior and authority."</blockquote>
+        <blockquote>"We challenge the normative use of lighting as a surveillance tool."</blockquote>
+        <blockquote>"By creating fleeting moments of altered illumination, we invite new public imaginaries."</blockquote>
+        <p><a href="https://www.youtube.com/watch?v=B4ISWLAnkkw" target="_blank">Valoa Oulu! Festival - Guerrilla Lighting Project</a></p>
+        <div class="practice-image-container">
+          <img src="image_web/02_Ainola_Musuem_-_after_510_340_60.jpg" alt="Guerrilla Lighting Project at Valoa Oulu!" class="practice-image">
+        </div>
+          <div class="festival-content">
+            <h4>Valoa Oulu!</h4>
+            <p><strong>21-24 November 2013</strong><br>
+            <strong>Oulu, Finland</strong></p>
+            <p><a href="http://www.ouka.fi/valoaoulu" target="_blank">www.ouka.fi/valoaoulu</a></p>
+            <p>Light Collective headed up two Guerrilla Lighting events in Oulu as part of the Valoa Oulu! Festival. The festival was to celebrate the coming together of many municipalities to create a new larger city. As well as a Guerrilla event in Oulu city Centre, we headed out to one of the outlying communities Oulunsalo to recruit the locals as Guerrillas and help us illuminate their area.</p>
+          </div>
+      </div>
+
+      <div class="practice-group">
+        <h3><a href="https://www.goodreads.com/book/show/6847781-critical-play?ref=nav_sb_noss_l_34" target="_blank">Mary Flanagan – Critical Play: Radical Game Design</a></h3>
+        <div class="practice-image-container">
+          <img src="image_web/Critical Play-Radical Game Design.jpg" alt="Critical Play: Radical Game Design by Mary Flanagan" class="practice-image">
+        </div>
+        <blockquote>"Critical play means to create or occupy play environments and activities that represent alternative values."</blockquote>
+        <blockquote>"Games are not neutral—they always reflect cultural values and social structures."</blockquote>
+        <blockquote>"Game mechanics can reproduce bias—or subvert it."</blockquote>
+        <blockquote>"Playing is a way of rehearsing new possibilities for agency and social change."</blockquote>
+        <blockquote>"Critical game design encourages reflection, resistance, and invention."</blockquote>
+      </div>
+
+      <div class="practice-group">
+        <h3><a href="https://www.studioroosegaarde.net/" target="_blank">Studio Roosegaarde / Digital Urban Night Labs</a></h3>
+        <blockquote>"Light is our language to create landscapes of the future."</blockquote>
+        <div class="practice-image-container">
+          <img src="image_web/Spark_II.png" alt="Spark II - Studio Roosegaarde Project" class="practice-image">
+        </div>
+        <blockquote>"Darkness is not empty—it is where imagination begins."</blockquote>
+        <div class="practice-image-container">
+          <img src="image_web/Spark_I.png" alt="Spark I - Studio Roosegaarde Project" class="practice-image">
+        </div>
+        <blockquote>"We want to design with nature, not against it—light must respond to ecology."</blockquote>
+        <div class="practice-image-container">
+          <img src="image_web/Glowing_Garden_I.png" alt="Glowing Garden I - Studio Roosegaarde Project" class="practice-image">
+        </div>
+        <blockquote>"The night has beauty, rhythm, and needs respect."</blockquote>
+        <div class="practice-image-container">
+          <img src="image_web/Glowing_Garden_II.png" alt="Glowing Garden II - Studio Roosegaarde Project" class="practice-image">
+        </div>
+        <blockquote>"Our projects transform functional infrastructures into poetic experiences."</blockquote>
+        <div class="practice-image-container">
+          <img src="image_web/Van_Gogh_Path.png" alt="Van Gogh Path - Studio Roosegaarde Project" class="practice-image">
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Situated Technology</h2>
+      <ol>
+        <li>
+          <strong>Power</strong>
+          <p>Light pollution is not merely a byproduct of infrastructure—it is an intentional distribution of visibility and obscurity that reflects uneven power structures.</p>
+        </li>
+        <li>
+          <strong>Perception</strong>
+          <p>Light shapes not just what is seen, but also how it is seen. The aesthetic of safety—bright, sanitized, uniform—has historically been linked to colonial, capitalist, and racialized regimes of visibility.</p>
+        </li>
+        <li>
+          <strong>Infrastructure</strong>
+          <p>Artificial lighting is an infrastructural technology that governs time, behavior, and territory. Yet, its governance is opaque.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="block">
+      <h2>Methods</h2>
+      <dl>
+        <dt><strong>Quantitative</strong></dt>
+        <dd>GIS light pollution datasets, energy usage estimates, ecological night cycle modeling</dd>
+        
+        <dt><strong>Qualitative</strong></dt>
+        <dd>discourse analysis of light-related policies, urban design codes, community surveys</dd>
+        
+        <dt><strong>Design methods</strong></dt>
+        <dd>speculative card prototyping, diagramming visibility zones, participatory mechanics design</dd>
+        
+        <dt><strong>Tools</strong></dt>
+        <dd>Unity, Illustrator / InDesign for cards, Rhino/GH for city light studies, Mapbox or satellite imagery</dd>
+        
+        <dt><strong>Style</strong></dt>
+        <dd>print + AR hybrid visual elements, coded glow/opacity dynamics on cards</dd>
+      </dl>
+    </section>
+
+    <section class="block">
+      <h2>Visual Representation</h2>
+      
+      <h3>Main</h3>
+      <div class="visual-item">
+        <img src="image_VisualRepresentation/1920s New York Noir.png" alt="1920s New York Noir" class="visual-image">
+        <div class="visual-content">
+          <strong>Noir cinema and night photography</strong>
+          <ul>
+            <li>High-contrast black-and-white imagery, where deep shadows and isolated highlights intensify emotional atmosphere.</li>
+            <li>Ideal for evoking the sensory experience of the city at night, emphasizing psychological and spatial contrasts between light and darkness.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="visual-item">
+        <img src="image_VisualRepresentation/Cyberpunk Neon Cityscape.png" alt="Cyberpunk Neon Cityscape" class="visual-image">
+        <div class="visual-content">
+          <strong>Cyberpunk/neon abstraction</strong>
+          <ul>
+            <li>Features saturated colors and strong contrasts, with neon lighting shaping a futuristic or hyper-urban aesthetic.</li>
+            <li>Useful for simulating the ambiance of artificial light spectra and sensory overload in late-capitalist nightscapes.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <h3>Secondary</h3>
+      <div class="visual-item">
+        <img src="image_VisualRepresentation/Thermal or Infrared Imaging.png" alt="Thermal or Infrared Imaging" class="visual-image">
+        <div class="visual-content">
+          <strong>Thermal/infrared visualizations</strong>
+          <ul>
+            <li>Uses false-color rendering to visualize heat or light radiation distribution.</li>
+            <li>Can be interpreted as a visual analogue for mapping light intensity or light pollution levels in urban environments.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="visual-item">
+        <img src="image_VisualRepresentation/Architectural Lighting Diagram.png" alt="Architectural Lighting Diagram" class="visual-image">
+        <div class="visual-content">
+          <strong>Architectural lighting diagrams</strong>
+          <ul>
+            <li>Includes beam paths, illuminance distribution, and spatial penetration diagrams.</li>
+            <li>Serves as a visual backbone for interface prototypes or rule explanations in card-based or board games.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="card-container">
+      <img src="image_cards/HX1.png" alt="HX1" class="card-image">
+      <img src="image_cards/HF1.png" alt="HF1" class="card-image">
+      <img src="image_cards/LS1.png" alt="LS1" class="card-image">
+      <img src="image_cards/SS1.png" alt="SS1" class="card-image">
+      <img src="image_cards/CBD.png" alt="CBD" class="card-image">
+      <img src="image_cards/TYC.png" alt="TYC" class="card-image">
+      <img src="image_cards/SC.png" alt="SC" class="card-image">
+      <img src="image_cards/GL.png" alt="GL" class="card-image">
+      <img src="image_cards/CS.png" alt="CS" class="card-image">
+    </div>
+
+    <section class="block">
+      <h2>Rhetorical Argument</h2>
+      <blockquote>Design is power over perception.</blockquote>
+      <p>This game is a critique of how illumination is normalized, weaponized, and commodified in the modern city.</p>
+      <blockquote>Darkness is not absence—it is resistance, intimacy, ecology, and freedom.</blockquote>
+      <p>Who gets to stay visible, and who gets to disappear?</p>
+    </section>
+
+    <section class="block">
+      <h2>Capstone Project Outline</h2>
+      <p>Full card game simulating urban light politics, including AR overlays, city map modules, and data-driven balance tuning.</p>
+    </section>
+
+    <section class="block">
+      <h2>Challenges</h2>
+      <dl>
+        <dt><strong>Data</strong></dt>
+        <dd>Access to accurate and mappable light pollution datasets for simulation.</dd>
+        
+        <dt><strong>Skill gaps</strong></dt>
+        <dd>Advanced visualization (Mapbox styling, AR overlay), complex rule balancing, Unity game development.</dd>
+        
+        <dt><strong>Time</strong></dt>
+        <dd>Prototyping physical + digital elements takes longer than screen-only work.</dd>
+        
+        <dt><strong>Discourse clarity</strong></dt>
+        <dd>Need to balance abstraction with legibility — don't let speculative mechanics obscure critique.</dd>
+      </dl>
+    </section>
+
+    <section class="block">
+      <h2>Proposal for drawing type</h2>
+      <dl>
+        <dt><strong>Layered Tactical Mapping</strong></dt>
+        <dd>
+          <ul>
+            <li>Overlays of light intensity, human density, ecological sensitivity, and surveillance zones across the city.</li>
+            <li>Inspired by Half-Earth Socialism (Including sketches), Civilization VI, etc.</li>
+            <li>Can include temporal dynamics (day–night transition, curfews, etc.).</li>
+          </ul>
+        </dd>
+        
+        <dt><strong>Card-Mechanic Diagramming</strong></dt>
+        <dd>
+          <ul>
+            <li>Systems-based diagrams showing how card effects chain into urban transformations (e.g. illuminate → visibility → surveillance increase).</li>
+            <li>Cards as nodes, actions as edges—using tools like D3.js or Illustrator.</li>
+            <li>Useful to explain and critique systemic cause-and-effect in gameplay.</li>
+          </ul>
+        </dd>
+        
+        <dt><strong>Speculative Urban Section Drawings</strong></dt>
+        <dd>
+          <ul>
+            <li>Cross-sections of urban areas rendered under different lighting policies.</li>
+            <li>Contrasts between old neighborhoods, commercial zones, ecological preserves, and "unlit zones."</li>
+            <li>Emphasizes social, emotional, and biological impacts of night lighting.</li>
+          </ul>
+        </dd>
+        
+        <dt><strong>Sensorial Field Sketching</strong></dt>
+        <dd>
+          <ul>
+            <li>Loose, expressive sketches, collages, or visual diaries reflecting how different people experience visibility and darkness.</li>
+            <li>Ties into themes of affect, exclusion, and embodied perception.</li>
+          </ul>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="block">
+      <h2>Proposal for material gesture</h2>
+      <dl>
+        <dt><strong>A series of drawings illustrating key insights from the research</strong></dt>
+        <dd>A comprehensive visual documentation that captures the theoretical and practical findings of the light pollution research, translating complex urban dynamics into accessible visual narratives.</dd>
+        
+        <dt><strong>A handmade card set (6–10 pieces) that materializes the experience of light inequality across urban spaces</strong></dt>
+        <dd>A tangible artifact that allows players to physically interact with and understand the spatial and social implications of light distribution in cities, bridging the gap between digital simulation and real-world experience.</dd>
+      </dl>
+    </section>
+
+    <div class="stars-container">
+    </div>
+  </main>
+
+  <footer>
+    <p>CDP Summer Colloquium 2025 – Final Assignment Draft</p>
+    <p class="author">Jeremy Gu</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
