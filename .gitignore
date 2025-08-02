@@ -1,0 +1,7 @@
+# 忽略所有常见图片
+*.png
+*.jpg
+*.jpeg
+*.tiff
+*.bmp
+*.gif
