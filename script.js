@@ -145,3 +145,126 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Image Modal Functions
+let modalZoomLevel = 1;
+let modalImageElement = null;
+let isDragging = false;
+let dragStartX = 0;
+let dragStartY = 0;
+let dragOffsetX = 0;
+let dragOffsetY = 0;
+
+function openImageModal(src, alt) {
+  const modal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+  
+  modalImage.src = src;
+  modalImage.alt = alt;
+  modal.classList.add('show');
+  
+  // Reset zoom level and drag position when opening modal
+  modalZoomLevel = 1;
+  modalImageElement = modalImage;
+  dragOffsetX = 0;
+  dragOffsetY = 0;
+  updateModalImageTransform();
+  
+  // Prevent body scroll when modal is open
+  document.body.style.overflow = 'hidden';
+}
+
+function closeImageModal() {
+  const modal = document.getElementById('imageModal');
+  modal.classList.remove('show');
+  
+  // Reset zoom level and drag position
+  modalZoomLevel = 1;
+  modalImageElement = null;
+  isDragging = false;
+  dragOffsetX = 0;
+  dragOffsetY = 0;
+  
+  // Restore body scroll
+  document.body.style.overflow = 'auto';
+}
+
+function updateModalImageTransform() {
+  if (modalImageElement) {
+    modalImageElement.style.transform = `scale(${modalZoomLevel}) translate(${dragOffsetX}px, ${dragOffsetY}px)`;
+  }
+}
+
+function handleModalWheel(e) {
+  if (!modalImageElement) return;
+  
+  e.preventDefault();
+  
+  const zoomSpeed = 0.1;
+  const delta = e.deltaY > 0 ? -zoomSpeed : zoomSpeed;
+  const newZoom = Math.max(0.5, Math.min(3, modalZoomLevel + delta));
+  
+  if (newZoom !== modalZoomLevel) {
+    modalZoomLevel = newZoom;
+    updateModalImageTransform();
+  }
+}
+
+function handleModalMouseDown(e) {
+  if (!modalImageElement || e.button !== 0) return; // Only left mouse button
+  
+  isDragging = true;
+  dragStartX = e.clientX - dragOffsetX;
+  dragStartY = e.clientY - dragOffsetY;
+  
+  // Change cursor to indicate dragging
+  modalImageElement.style.cursor = 'grabbing';
+  
+  e.preventDefault();
+}
+
+function handleModalMouseMove(e) {
+  if (!isDragging || !modalImageElement) return;
+  
+  dragOffsetX = e.clientX - dragStartX;
+  dragOffsetY = e.clientY - dragStartY;
+  
+  updateModalImageTransform();
+  
+  e.preventDefault();
+}
+
+function handleModalMouseUp(e) {
+  if (!modalImageElement) return;
+  
+  isDragging = false;
+  
+  // Change cursor back to zoom-in
+  modalImageElement.style.cursor = 'zoom-in';
+}
+
+// Close modal when clicking outside the image
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('imageModal');
+  
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeImageModal();
+    }
+  });
+  
+  // Close modal with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('show')) {
+      closeImageModal();
+    }
+  });
+  
+  // Add wheel event listener for zooming
+  modal.addEventListener('wheel', handleModalWheel, { passive: false });
+  
+  // Add mouse event listeners for dragging
+  modal.addEventListener('mousedown', handleModalMouseDown);
+  document.addEventListener('mousemove', handleModalMouseMove);
+  document.addEventListener('mouseup', handleModalMouseUp);
+});
