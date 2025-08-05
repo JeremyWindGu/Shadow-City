@@ -1341,3 +1341,153 @@ body.scroll-darkest::after {
   margin-top: 15px;
   grid-column: 1 / -1;
 }
+
+/* Research question styling */
+.research-question {
+  color: #00ffff !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.7) !important;
+  display: block !important;
+  margin-bottom: 0.8em !important;
+  font-size: 1.4em !important;
+  letter-spacing: 0.8px !important;
+  transition: all 0.3s ease !important;
+  line-height: 1.4 !important;
+}
+
+.research-question:hover {
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.9) !important;
+  transform: scale(1.02) !important;
+}
+
+/* Question divider styling */
+.question-divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0, 255, 255, 0.3) 20%, 
+    rgba(0, 255, 255, 0.6) 50%, 
+    rgba(0, 255, 255, 0.3) 80%, 
+    transparent 100%);
+  margin: 2em 0;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  animation: dividerGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes dividerGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  }
+}
+
+/* Precedent images row styling */
+.precedent-images-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.precedent-image-container {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: stretch;
+}
+
+.precedent-image-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.2);
+  border-color: rgba(0, 255, 255, 0.3);
+}
+
+.precedent-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.precedent-image:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* Precedent GIF container styling */
+.precedent-gif-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.precedent-gif-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.2);
+  border-color: rgba(0, 255, 255, 0.3);
+}
+
+.precedent-gif {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.precedent-gif:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* Responsive design for precedent images */
+@media (max-width: 768px) {
+  .precedent-images-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .precedent-image-container {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  
+  .precedent-gif-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .precedent-images-row {
+    gap: 10px;
+  }
+  
+  .precedent-image-container {
+    margin-bottom: 10px;
+  }
+}
